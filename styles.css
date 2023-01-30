@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.crumb {
+  display: inline-block;
+}
+
+.header-nav a,
+.footer-nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.header {
+  background: #172432;
+  height: 57px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.destinations {
+  height: 550px;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.destinations-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.destinations p {
+  width: 220px;
+}
+
+.destinations-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.germany-img,
+.paris-img,
+.italy-img {
+  width: 250px;
+}
+
+.info {
+  width: 20%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-wrapper {
+  background: #172432;
+  height: 77px;
+  padding: 20px;
+}
+
+.footer-wrapper p {
+  color: #fff;
+}
