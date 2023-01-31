@@ -19,11 +19,14 @@ body {
   min-height: 100vh;
 }
 
+.navigation-container {
+  background: #172432;
+}
+
 .navigation-wrapper {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .nav-item {
@@ -130,10 +133,6 @@ body {
    transition: 0.5s;
 }
 
-#info-toggle {
-  visibility: hidden;
-}
-
 .button:hover ~ .menu-text {
   visibility: visible;
 }
@@ -143,6 +142,7 @@ body {
   background: none;
   font-size: 20px;
   font-weight: 700;
+  color: white;
 }
 
 .header-nav a,
