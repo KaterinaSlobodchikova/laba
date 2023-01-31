@@ -16,11 +16,24 @@ body {
 
 .main {
   display: flex;
+  min-height: 100vh;
+}
+
+.navigation-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
 }
 
 .hamburger-menu {
-  flex-grow: 1;
-  width: 90px;
+  min-width: 50px;
+  transition: width 1.5s ease-in-out;
 }
 
 #menu-toggle {
@@ -30,7 +43,7 @@ body {
 .menu-btn {
   display: flex;
   align-items: center;
-  position: fixed;
+  /* position: fixed; */
   top: 20px;
   left: 15px;
   width: 26px;
@@ -58,18 +71,15 @@ body {
 
 .menu-box {
   display: block;
-  position: fixed;
   visibility: hidden;
-  top: 0;
-  left: -100%;
-  width: 200px;
+  width: 50px;
   height: 100%;
   margin: 0;
   padding: 80px 0;
   list-style: none;
   text-align: center;
   background-color: #eceff1;
-  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 5px 15px rgba(4, 4, 4, 0.2);
 }
 
 .menu-item {
@@ -98,7 +108,10 @@ body {
 }
 #menu-toggle:checked ~ .menu-box {
   visibility: visible;
-  left: 0;
+}
+
+.header-nav #menu-toggle:checked ~ .menu-box {
+  width: 150px;
 }
 
 .header-nav {
@@ -112,6 +125,26 @@ body {
   display: inline-block;
 }
 
+.menu-text {
+  visibility: hidden;
+   transition: 0.5s;
+}
+
+#info-toggle {
+  visibility: hidden;
+}
+
+.button:hover ~ .menu-text {
+  visibility: visible;
+}
+
+.button {
+  border: none;
+  background: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .header-nav a,
 .footer-nav a {
   text-decoration: none;
@@ -119,12 +152,18 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: 0;
   background: #172432;
   height: 57px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+}
+
+.main-wrapper {
+  width: 90%;
 }
 
 .logo {
@@ -165,9 +204,34 @@ body {
   width: 250px;
 }
 
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion-text {
+   overflow: hidden;
+   transition: 0.5s;
+}
+
+#info-toggle {
+  visibility: visible;
+}
+
+#info-toggle:checked ~ .accordion-text {
+  visibility: hidden;
+}
+
 .info {
   width: 20%;
-  padding-left: 0.5rem;
+  padding-left: 50px;
   margin-left: 0.5rem;
   float: right;
   box-shadow: inset 5px 0 5px -5px #29627e;
